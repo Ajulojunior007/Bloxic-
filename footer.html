@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style-type: none;
+        font-family: sans-serif;
+      }
+      header {
+        background-color: #fff;
+        position: relative;
+        border: 1px hidden black;
+        height: 30px;
+        box-shadow: 0px 10px 0px 0px whitesmoke;
+      }
+      header img {
+        margin-top: -16px;
+        float: left;
+        padding-left: 50px;
+      }
+      .header1 {
+        float: right;
+        padding-right: 50px;
+      }
+      .header1 a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-family: "Jost", sans-serif;
+        font-weight: bolder;
+      }
+      .header1 a:hover {
+        color: red;
+      }
+      .header1 a:focus {
+        color: red;
+      }
+      body{
+        height: 100vh;
+        width: 100%;
+        background-color:#e5e5e5;
+      }
+      section{
+        padding: 80px 5% 70px;
+      }
+      .footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        gap: 3.5rem;
+        background-color:#e5e5e5 ;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .footer-content h4{
+        color: #fff;
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+      }
+      .footer-content li{
+        margin-bottom: 16px;
+      }
+      .footer-content li a{
+        display: block;
+        color: black;
+        font-size: 16px;
+        font-weight: 400;
+        transition: all .40s ease;
+      }
+      .footer-content li a:hover{
+        transform: translateY(-3px) translateX(-5px);
+        color: #fff;
+      }
+      .footer-content p{
+        color:black ;
+        font-size: 16px;
+        /* line-height: 30px; */
+        margin: 20px 0;
+      }
+      .icons a{
+        display: inline-block;
+        font-size: 15px;
+        color: black;
+        margin-right: 17px;
+        transition: all .40s ease;
+      }
+      .icons a:hover{
+        color: #fff;
+        transform: translateY(-5px);
+      }
+      .wrapper{
+        position: relative;
+        max-height: 378px;
+        width: 100vw;
+        border: 1px hidden black;
+        display: flex;
+        /* left: 0;
+        right: 0; */
+        overflow-x: scroll;
+        /* overflow-y: scroll; */
+        
+      }
+      .wrapper::-webkit-scrollbar{
+        width: 0;
+      }
+      .wrapper .item{
+        position: relative;
+        min-width: 200px;
+        height: 378px;
+        line-height: 110px;
+        background-color: #e5e5e5;
+        margin-right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src="./logo.png" alt="" /></div>
+      <div class="header1">
+        <a href="#">Home</a> <a href="#">About</a> <a href="#">Shop</a>
+        <a href="#">Blog</a> <a href="#">Contact Us</a>
+      </div>
+    </header>
+    <div class="wrapper">
+        <div class="item"><img src="./slide1.png" alt=""></div>
+        <div class="item"><img src="./slide2.png" alt=""></div>
+        <div class="item"><img src="./slide3.png" alt=""></div>
+        <div class="item"><img src="./slide4.png" alt=""></div>
+        <div class="item"><img src="./slide5.png" alt=""></div>
+        <div class="item"><img src="./slide6.png" alt=""></div>
+        <div class="item"><img src="./slide7.png" alt=""></div>
+        <div class="item"><img src="./slide8.png" alt=""></div>
+        <div class="item"><img src="./slide9.png" alt=""></div>
+        <div class="item"><img src="./slide10.png" alt=""></div>
+        <div class="item"><img src="./slide11.jpg" alt=""></div>
+        <div class="item"><img src="./slide12.jpg" alt=""></div>
+        <div class="item"><img src="./slide13.jpg" alt=""></div>
+    </div>
+    
+  </body>
+  <footer>
+    <section class="footer">
+        <div class="footer-content">
+            <img src="./logo.png" alt="" />
+            <p>
+              4517 Washington Ave, Manchester, Kentucky 39495 <br /><br />
+              Washington Ave Manchester,<br /><br />
+            </p>
+            <div class="icons">
+              <a href="#"><iconify-icon icon="pepicons-pencil:person-circle-filled" style="color: black;"></iconify-icon>254 Lillian Blvd, Holbrook</a><br>
+              <a href="#"><iconify-icon icon="f7:phone-circle-fill" style="color: black;"></iconify-icon> 1-800-654-3210</a>
+            </div>
+          </div>
+          <div class="footer-content">
+              <h4>Find it Fast</h4>
+              <li><a href="#">Laptos & Computers</a></li>
+              <li><a href="#">Cameras & Photography</a></li>
+              <li><a href="#">Smart Phones & Tables</a></li>
+              <li><a href="#">Video Games & Consoles</a></li>
+              <li><a href="#">TV & Audio</a></li>
+          </div>
+          <div class="footer-content">
+              <h4>Quick Links</h4>
+              <li><a href="#">Your account</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Return Center</a></li>
+              <li><a href="#">Purchase History</a></li>
+              <li><a href="#">App Download</a></li>
+          </div>
+          <div class="footer-content">
+              <h4>Service us</h4>
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Help</a></li>
+          </div>
+    </section>
+  </footer>
+</html>

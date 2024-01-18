@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,300&family=Outfit&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Jost", sans-serif;
+        font-weight: 400;
+        line-height: 1.6em;
+      }
+      header {
+        position: relative;
+        border: 1px hidden black;
+        height: 30px;
+        box-shadow: 0px 10px 0px 0px whitesmoke;
+      }
+      header img {
+        margin-top: -16px;
+        float: left;
+        padding-left: 50px;
+      }
+      .header1 {
+        float: right;
+        padding-right: 50px;
+      }
+      .header1 a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-family: "Jost", sans-serif;
+        font-weight: bolder;
+      }
+      .header1 a:hover {
+        color: red;
+      }
+      .header1 a:focus {
+        color: red;
+      }
+      .container {
+        position: relative;
+        border: 1px hidden black;
+        top: 10px;
+        padding: auto;
+        width: 97vw;
+        height: 90vh;
+        font-family: "Jost", sans-serif;
+      }
+      .box1 {
+        position: absolute;
+        padding: auto;
+        width: 67vw;
+        height: 90vh;
+        border: 1px hidden black;
+        font-family: "Jost", sans-serif;
+      }
+      .box2 {
+        position: relative;
+        padding: auto;
+        width: 30vw;
+        height: 90vh;
+        border: 1px hidden black;
+        font-family: "Jost", sans-serif;
+        float: right;
+      }
+      .chart,
+      .calculate {
+        position: relative;
+        border: 1px hidden black;
+        width: 30vw;
+        height: 45vh;
+      }
+      .item-quantity {
+        border: 1px hidden black;
+      }
+      input[class="spinner"] {
+        width: 15px;
+        background-color: lightgray;
+        border: hidden;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        cursor: pointer;
+      }
+      .add {
+        background-color: white;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+      .image {
+        position: relative;
+        float: left;
+        border: 1px hidden black;
+        margin-left: 0px;
+        margin-top: -30px;
+        margin-bottom: 20px;
+        top: 45px;
+      }
+      .item {
+        position: relative;
+        float: right;
+        padding-left: 20px;
+        text-align: left;
+        top: -26px;
+      }
+      table tr th {
+        border: 1px hidden black;
+      }
+      th,
+      td {
+        position: relative;
+        width: 98vw;
+        text-align: center;
+        margin-top: -10px;
+      }
+      .image > img {
+        position: relative;
+        width: 70px;
+        height: 65px;
+        border: 1px solid #f0f0f0;
+        left: 10px;
+      }
+      table tr td {
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .box1 span {
+        position: absolute;
+        right: -20px;
+        top: -10px;
+        font-weight: 700;
+        cursor: pointer;
+        line-height: 16px;
+        text-align: center;
+        border-radius: 50px;
+        font-family: "Flaticon";
+      }
+      h6 {
+        position: relative;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .text {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: -12px;
+        color: rgb(20, 33, 45);
+        line-height: 24px;
+      }
+      .one {
+        right: 30px;
+      }
+      .price {
+        vertical-align: middle;
+        font-weight: 500;
+        font-size: 15px;
+        color: rgb(35, 35, 35);
+      }
+      .total {
+        vertical-align: middle;
+        font-weight: 500;
+        font-size: 15px;
+        color: rgb(35, 35, 35);
+      }
+      .item-quantity {
+        position: relative;
+        width: 100%;
+        max-width: 140px;
+        padding: 0px 45px;
+        display: inline-block;
+      }
+      .box2 .chart .title {
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .title > h6 {
+        line-height: 1.6em;
+        font-size: 18px;
+      }
+      ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+      }
+      .chartbox {
+        border: 1px solid #f0f0f0;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .chartbox li {
+        position: relative;
+        padding: 15px 0px;
+        font-size: 18px;
+        color: black;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .chartbox li span {
+        position: absolute;
+        right: 0px;
+      }
+      .chartbox .checkbox {
+        position: relative;
+        margin-bottom: 25px;
+        margin-top: 20px;
+      }
+      .chartbox .checkbox input[type=".checkbox"] {
+        display: none;
+      }
+      .chartbox .checkbox label {
+        position: relative;
+        /* display: block; */
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 0;
+        font-weight: 400;
+        line-height: 22px;
+        background: #ffffff;
+        padding: 4px 10px 0px;
+        padding-left: 4px;
+        font-size: 16px;
+        color: rgb(114, 116, 126);
+      }
+      .chartbox .button {
+        text-align: center;
+        margin-left: 0px;
+        position: relative;
+        padding: 16px 15px;
+        width: 93%;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 15px;
+        color: white;
+        background-color: red;
+        font-family: "Outfit", sans-serif;
+        cursor: pointer;
+      }
+      .box2 .calculate .title {
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .calculate {
+        position: relative;
+        bottom: 50px;
+      }
+      .list {
+        border: 1px solid #f0f0f0;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .list li {
+        position: relative;
+        padding: 15px 0px;
+        font-size: 18px;
+        color: black;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .list .button {
+        margin-top: 10px;
+        text-align: center;
+        margin-right: 100px;
+        position: relative;
+        padding: 16px 15px;
+        width: 50%;
+        border-radius: 0px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        background-color: black;
+        font-family: "Outfit", sans-serif;
+        transition: all 500ms ease;
+        transition-property: background;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s;
+      }
+      .list .button:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img class="logo" src="./logo.png" alt="" /></div>
+      <div class="header1">
+        <a href="http://127.0.0.1:5501/Bloxic/Homepage.html">Home</a> <a href="http://127.0.0.1:5501/Bloxic/footer.html">About</a> <a href="#">Shop</a>
+        <a href="#">Blog</a> <a href="http://127.0.0.1:5501/Bloxic/footer.html">Contact Us</a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="box1">
+        <table>
+          <div class="column">
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </div>
+          <div class="column">
+            <tr>
+              <td>
+                <div class="image">
+                  <img src="./logech.png" alt="" />
+                  <span>
+                    <iconify-icon
+                      icon="material-symbols-light:cancel"
+                      style="color: red"
+                      width="22"
+                      height="22"
+                    ></iconify-icon>
+                  </span>
+                </div>
+                <div class="item first">
+                  <h6>Logech Headphone</h6>
+                  <div class="text">
+                    color : Brown
+                    <br />
+                    Quantity : 2
+                  </div>
+                </div>
+              </td>
+              <td class="price">$32.00</td>
+              <td>
+                <div class="item-quantity">
+                  <button type="button" class="add" value="-">-</button>
+                  <input
+                    class="spinner"
+                    type="text"
+                    value="1"
+                    name="quantity"
+                  />
+                  <button type="button" class="add" value="+">+</button>
+                </div>
+              </td>
+              <td class="total">$219.00</td>
+            </tr>
+          </div>
+          <div class="column">
+            <tr>
+              <td>
+                <div class="image">
+                  <img src="./Asus.png" alt="" />
+                  <span>
+                    <iconify-icon
+                      icon="material-symbols-light:cancel"
+                      style="color: red"
+                      width="22"
+                      height="22"
+                    ></iconify-icon>
+                  </span>
+                </div>
+                <div class="item one">
+                  <h6>Asus Vivobook</h6>
+                  <div class="text">
+                    color : Brown <br />
+                    Quantity : 2
+                  </div>
+                </div>
+              </td>
+              <td class="price">$19.00</td>
+              <td>
+                <div class="item-quantity">
+                  <button type="button" class="add" value="-">-</button>
+                  <input
+                    class="spinner"
+                    type="text"
+                    value="1"
+                    name="quantity"
+                  />
+                  <button type="button" class="add" value="+">+</button>
+                </div>
+              </td>
+              <td class="total">$219.00</td>
+            </tr>
+          </div>
+          <div class="column">
+            <tr>
+              <td>
+                <div class="image">
+                  <img src="./Woolen.png" alt="" />
+                  <span>
+                    <iconify-icon
+                      icon="material-symbols-light:cancel"
+                      style="color: red"
+                      width="22"
+                      height="22"
+                    ></iconify-icon>
+                  </span>
+                </div>
+                <div class="item one">
+                  <h6>Wooden Huddie</h6>
+                  <div class="text">
+                    color : Brown <br />
+                    Quantity : 2
+                  </div>
+                </div>
+              </td>
+              <td class="price">$21.00</td>
+              <td>
+                <div class="item-quantity">
+                  <button type="button" class="add" value="-">-</button>
+                  <input
+                    class="spinner"
+                    type="text"
+                    value="1"
+                    name="quantity"
+                  />
+                  <button type="button" class="add" value="+">+</button>
+                </div>
+              </td>
+              <td class="total">$219.00</td>
+            </tr>
+          </div>
+          <div class="column">
+            <tr>
+              <td>
+                <div class="image">
+                  <img src="./Woolen2.png" alt="" />
+                  <span>
+                    <iconify-icon
+                      icon="material-symbols-light:cancel"
+                      style="color: red"
+                      width="22"
+                      height="22"
+                    ></iconify-icon>
+                  </span>
+                </div>
+                <div class="item one">
+                  <h6>Wooden Huddie</h6>
+                  <div class="text">
+                    color : Brown <br />
+                    Quantity : 2
+                  </div>
+                </div>
+              </td>
+              <td class="price">$46.00</td>
+              <td>
+                <div class="item-quantity">
+                  <button type="button" class="add" value="-">-</button>
+                  <input
+                    class="spinner"
+                    type="text"
+                    value="1"
+                    name="quantity"
+                  />
+                  <button type="button" class="add" value="+">+</button>
+                </div>
+              </td>
+              <td class="total">$219.00</td>
+            </tr>
+          </div>
+          <div class="column">
+            <tr>
+              <td>
+                <div class="image">
+                  <img src="./woolen3.png" alt="" />
+                  <span>
+                    <iconify-icon
+                      icon="material-symbols-light:cancel"
+                      style="color: red"
+                      width="22"
+                      height="22"
+                    ></iconify-icon>
+                  </span>
+                </div>
+                <div class="item one">
+                  <h6>Wooden Huddie</h6>
+                  <div class="text">
+                    color : Brown <br />
+                    Quantity : 2
+                  </div>
+                </div>
+              </td>
+              <td class="price">$13.00</td>
+              <td>
+                <div class="item-quantity">
+                  <button type="button" class="add" value="-">-</button>
+                  <input
+                    class="spinner"
+                    type="text"
+                    value="1"
+                    name="quantity"
+                  />
+                  <button type="button" class="add" value="+">+</button>
+                </div>
+              </td>
+              <td class="total">$219.00</td>
+            </tr>
+          </div>
+          <div class="column">
+            <tr>
+              <td>
+                <div class="image">
+                  <img src="./Woolen4.png" alt="" />
+                  <span>
+                    <iconify-icon
+                      icon="material-symbols-light:cancel"
+                      style="color: red"
+                      width="22"
+                      height="22"
+                    ></iconify-icon>
+                  </span>
+                </div>
+                <div class="item one">
+                  <h6>Wooden Huddie</h6>
+                  <div class="text">
+                    color : Brown <br />
+                    Quantity : 2
+                  </div>
+                </div>
+              </td>
+              <td class="price">$13.00</td>
+              <td>
+                <div class="item-quantity">
+                  <button type="button" class="add" value="-">-</button>
+                  <input
+                    class="spinner"
+                    type="text"
+                    value="1"
+                    name="quantity"
+                  />
+                  <button type="button" class="add" value="+">+</button>
+                </div>
+              </td>
+              <td class="total">$219.00</td>
+            </tr>
+          </div>
+        </table>
+      </div>
+      <div class="box2">
+        <div class="chart">
+          <div class="title">
+            <h6>Chart Totals</h6>
+          </div>
+          <div class="chartbox">
+            <ul>
+              <li>
+                Subtotals :
+                <span>$381.00</span>
+              </li>
+              <li>
+                Totals :
+                <span>$381.00</span>
+              </li>
+            </ul>
+            <div class="checkbox">
+              <input type="checkbox" name="" id="" />
+              <label for="">Shipping & taxes calculated at checkout</label>
+            </div>
+            <div class="button">Proceed To checkout</div>
+          </div>
+        </div>
+        <div class="calculate">
+          <div class="title">
+            <h6>Calculate Shipping</h6>
+          </div>
+          <div class="list">
+            <ul>
+              <li>Bangladesh</li>
+              <li>Mirpur Dohs Dhaka-1200</li>
+              <li>Postal Code</li>
+            </ul>
+            <div class="button">Calculate Shipping</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

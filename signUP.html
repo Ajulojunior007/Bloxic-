@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        position: relative;
+        border: 1px hidden black;
+        height: 30px;
+        box-shadow: 0px 10px 0px 0px whitesmoke;
+      }
+      header img {
+        margin-top: -16px;
+        float: left;
+        padding-left: 50px;
+      }
+      .header1 {
+        float: right;
+        padding-right: 50px;
+      }
+      .header1 a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-family: "Jost", sans-serif;
+        font-weight: bolder;
+      }
+      .header1 a:hover {
+        color: red;
+      }
+      .header1 a:focus {
+        color: red;
+      }
+      .container {
+        position: relative;
+        border: 1px hidden black;
+        top: 10px;
+        padding: auto;
+        width: 99vw;
+        height: 90vh;
+        font-family: "Jost", sans-serif;
+      }
+      .box-one {
+        position: absolute;
+        padding: auto;
+        width: 48vw;
+        height: 90vh;
+        border: 1px hidden black;
+        font-family: "Jost", sans-serif;
+      }
+      .box-two {
+        margin-left: 40px;
+        width: 48vw;
+        height: 90vh;
+        border: 1px hidden black;
+        float: right;
+      }
+      .sign {
+        font-size: large;
+        padding: 20px;
+        margin-top: 40px;
+        text-decoration: none;
+        font-weight: bolder;
+      }
+
+      .name {
+        font-size: small;
+        padding-left: 20px;
+        margin-top: 20px;
+        font-weight: bolder;
+      }
+      input[type="text"] {
+        width: 40vw;
+        height: 6vh;
+        border-radius: 30px;
+        border: 1px solid lightgray;
+        margin-top: 8px;
+        font-family: "Jost", sans-serif;
+      }
+      .Email {
+        font-size: small;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+        font-weight: bolder;
+        font-family: "Jost", sans-serif;
+      }
+      input[type="email"] {
+        width: 40vw;
+        height: 6vh;
+        border-radius: 30px;
+        border: 1px solid lightgray;
+        margin-top: 20px;
+      }
+      .password {
+        font-size: small;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+        font-weight: bolder;
+      }
+      input[type="password"] {
+        width: 40vw;
+        height: 6vh;
+        border-radius: 30px;
+        border: 1px solid lightgray;
+        margin-top: 20px;
+      }
+      .Login {
+        font-size: large;
+        padding: 20px;
+        margin-top: 40px;
+        text-decoration: none;
+        font-weight: bolder;
+      }
+      .checkbox {
+        font-size: small;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+      }
+      span {
+        color: red;
+      }
+      .button {
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+      }
+      input[type="button"] {
+        width: 150px;
+        height: 50px;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        border: 1px hidden black;
+        font-family: "Jost", sans-serif;
+        cursor:pointer;
+      }
+      input[type="button"]:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src="./logo.png" alt="" /></div>
+      <div class="header1">
+        <a href="#">Home</a> <a href="#">About</a> <a href="#">Shop</a>
+        <a href="#">Blog</a> <a href="#">Contact Us</a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="box-one">
+        <!-- box one description -->
+        <div class="sign">Sign Up</div>
+        <div class="name">
+          Your Name
+          <div>
+            <input
+              type="text"
+              name="username"
+              minlength="5"
+              title="Enter your name"
+              maxlength="100"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+        </div>
+        <div class="Email">
+          Email Address
+          <div>
+            <input
+              type="email"
+              name="email"
+              minlength="15"
+              maxlength="30"
+              title="enter your email"
+              placeholder="Enter Email Address"
+              required
+            />
+          </div>
+        </div>
+        <div class="password">
+          New Password
+          <div>
+            <input
+              type="password"
+              name="password"
+              minlength="5"
+              maxlength="20"
+              title="password"
+              placeholder="Create password"
+              required
+            />
+          </div>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="" id="" /> I agree to all
+          <span>Terms</span> & <span>Condition</span> and Feeds.
+        </div>
+        <div class="button">
+          <input type="button" value="Sign Up" />
+        </div>
+      </div>
+      <div class="box-two">
+        <div class="Login">Login Here</div>
+        <div class="Email">
+          Email Address
+          <div>
+            <input
+              type="email"
+              type="email"
+              name="email"
+              minlength="15"
+              maxlength="30"
+              title="enter your email"
+              placeholder="Enter Email Address"
+              required
+            />
+          </div>
+        </div>
+        <div class="password">
+          New Password
+          <div>
+            <input
+              type="password"
+              type="password"
+              name="password"
+              minlength="5"
+              maxlength="20"
+              title="Login your password"
+              placeholder="Login your password"
+              required
+            />
+          </div>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="" id="" /> Remember Me?.
+        </div>
+        <div class="button">
+          <input type="button" value="Login Here" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
